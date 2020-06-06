@@ -49,13 +49,13 @@ class ItcastSpider(scrapy.Spider):
             item['title'] = title[0]
             item['info'] = info[0]
 
-            items.append(item)
+            # items.append(item)
 
             # 将获得的值交给pipeline
-            # yield item
+            yield item
 
         # 返回数据,不经过pipeline
-        return items
+        # return items
 
 
 
