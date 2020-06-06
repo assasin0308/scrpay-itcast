@@ -50,7 +50,13 @@ class ItcastSpider(scrapy.Spider):
             item['info'] = info[0]
 
             items.append(item)
+
+            # 将获得的值交给pipeline
+            # yield item
+
+        # 返回数据,不经过pipeline
         return items
+
 
 
 
